@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nvidia-distributed-inference-prototype"
+version = "0.1.4"
+description = "Distributed Inference Network (DIN): independent inference with simulation and Apple Silicon MLX backends"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.28,<0.29",
+  "pydantic>=2.10,<3",
+  "uvicorn>=0.34,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2", "ruff>=0.11,<1", "mypy>=1.15,<2"]
+mlx = [
+  "mlx-lm==0.32.0; platform_system == 'Darwin' and platform_machine == 'arm64'",
+  "mlx==0.32.3; platform_system == 'Darwin' and platform_machine == 'arm64'",
+]
+
+[project.scripts]
+din = "inference_network.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+  "integration: real local subprocess and HTTP tests",
+  "real_model: opt-in Apple Silicon tests requiring MLX and the cached pinned model",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src"]

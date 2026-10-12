@@ -1,0 +1,57 @@
+# Python environments, caches, and packaging
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.egg-info/
+build/
+dist/
+*.whl
+
+# Local operating-system and runtime files
+.DS_Store
+*.log
+*.pid
+
+# Private configuration and SSH pairing material; keep profiles outside the checkout
+.env
+.env.*
+!.env.example
+!.env.*.example
+.din/
+.ssh/
+coordinator.json
+sender.json
+provider-*.json
+*.pairing.json
+*-invitation.json
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+known_hosts*
+authorized_keys*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Downloaded model weights and caches; benchmark evidence remains tracked
+benchmarks/runs/
+.cache/
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.onnx
+pytorch_model*.bin

@@ -1,0 +1,28 @@
+# Optional MLX dependencies resolved on macOS arm64, Python 3.12.14.
+# Use together with requirements-dev.lock as constraints for the mlx extra.
+filelock==4.0.12
+fsspec==2026.9.0
+hf-xet==1.7.0
+httpcore2==2.13.1
+httpx2==2.13.1
+huggingface_hub==2.2.0
+Jinja2==3.1.6
+markdown-it-py==4.2.0
+MarkupSafe==3.0.4
+mdurl==0.1.2
+mlx==0.32.3
+mlx-lm==0.32.0
+mlx-metal==0.32.3
+numpy==2.5.3
+protobuf==7.36.2
+PyYAML==6.0.3
+regex==2026.9.29
+rich==15.0.0
+safetensors==0.8.0
+sentencepiece==0.2.2
+shellingham==1.5.4
+tokenizers==0.23.3
+tqdm==4.70.1
+transformers==5.19.0
+truststore==0.10.4
+typer==0.27.3
