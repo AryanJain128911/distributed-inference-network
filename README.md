@@ -47,12 +47,4 @@ Apple M4, 16 GiB unified memory, pinned 4-bit Qwen 0.5B, three prompts, 30 warm 
 
 These are local workload measurements, including request processing and generation. [Benchmarking](docs/benchmarking.md) provides definitions, reproduction commands, and raw evidence.
 
-## Current limitations
-
-Real MLX inference and incremental SSE are verified on Apple Silicon. SSH-based inference has been tested on **one physical machine**; two-physical-machine inference remains unverified. The recorded full suite passed 409 tests, including MLX and SSH integration.
-
-- NVIDIA CUDA/vLLM execution is not implemented. Cost reduction has not been established.
-- Services use one worker and in-memory state, without durable queues or coordinator failover. Each MLX provider executes one request at a time.
-- LAN mode assumes trusted, authorized peers; localhost mode is unauthenticated. There is no tenant isolation, hardware attestation, billing, or production marketplace.
-- The API is a text Chat Completions subset without tools, images, or sampling overrides. Interrupted streams may lack usage; `[DONE]` is required for success.
 
