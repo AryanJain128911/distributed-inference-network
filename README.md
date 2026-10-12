@@ -56,6 +56,3 @@ Real MLX inference and incremental SSE are verified on Apple Silicon. SSH-based 
 - LAN mode assumes trusted, authorized peers; localhost mode is unauthenticated. There is no tenant isolation, hardware attestation, billing, or production marketplace.
 - The API is a text Chat Completions subset without tools, images, or sampling overrides. Interrupted streams may lack usage; `[DONE]` is required for success.
 
-See [setup and testing](docs/setup.md) and [future integration requirements](docs/architecture.md#future-nvidia-integration). The project follows [clean_code.md](clean_code.md).
-
-No project license has been selected. See [third-party licenses](docs/setup.md#third-party-licenses) before redistributing dependencies or weights.
