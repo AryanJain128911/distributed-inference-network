@@ -188,4 +188,4 @@ The tool requires existing services/tunnels and an existing output parent; it re
 
 ## Interpretation limits
 
-Measured performance covers one device, one small quantized model, and three prompts over loopback HTTP. Thermal/power state and background desktop activity were not controlled or logged. There is no accuracy study, verified two-physical-machine inference, energy/price measurement, or established cost reduction. NVIDIA CUDA/vLLM execution is not implemented; see the [project limitations](../README.md#current-limitations).
+Measured performance covers one device, one small quantized model, and three prompts over loopback HTTP. Thermal/power state and background desktop activity were not controlled or logged. There is no accuracy study, verified two-physical-machine inference, energy/price measurement, or established cost reduction. NVIDIA CUDA/vLLM execution is not implemented; see the [future integration requirements](architecture.md#future-nvidia-integration).

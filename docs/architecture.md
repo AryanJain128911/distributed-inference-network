@@ -1,6 +1,6 @@
 # Architecture
 
-DIN routes each complete request through **Sender → Coordinator → Provider → Backend**. Providers execute independently; the coordinator handles discovery and admission. [Setup](setup.md) covers operation, and the [README](../README.md#current-limitations) summarizes verification limits.
+DIN routes each complete request through **Sender → Coordinator → Provider → Backend**. Providers execute independently; the coordinator handles discovery and admission. [Setup](setup.md) covers operation, and the [README](../README.md) provides a project overview.
 
 ## Responsibilities and lifecycle
 
